@@ -1,10 +1,19 @@
-var numero1 = parseInt(prompt("inserisci Un numero"));
-var numero2 = parseInt(prompt("inserisci un numero"));
-var messaggio = "i numeri sono uguali"
-if (numero1 > numero2) {
-   messaggio = numero1
+var primoNumero = parseInt(prompt("insersisci un numero"))
+var secondoNumero = parseInt(prompt("inserisci un numero"))
+var messaggio;
+console.log(isNaN(primoNumero));
+console.log(isNaN(secondoNumero));
+while (isNaN(primoNumero) == true || isNaN(secondoNumero)== true) {
+ primoNumero = parseInt(prompt("insersisci un numero"))
+ secondoNumero = parseInt(prompt("inserisci un numero"))
 }
-else if (numero1 < numero2) {
-   messaggio = numero2
+if (primoNumero < secondoNumero) {
+  messaggio = primoNumero
 }
-alert(messaggio);
+else if (primoNumero > secondoNumero) {
+  messaggio = secondoNumero
+}
+else {
+  messaggio ="i numeri sono identici"
+}
+alert(messaggio)
